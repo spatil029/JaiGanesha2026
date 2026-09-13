@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --background: #071018;
+  --foreground: #eef4f2;
+  --ink: #d7e4dc;
+  --muted: #8aa197;
+  --gold: #e8c572;
+  --credit: #5ee0b0;
+  --expense: #ff8a7a;
+  --line: rgba(232, 197, 114, 0.16);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-gold: var(--gold);
+  --color-credit: var(--credit);
+  --color-expense: var(--expense);
+  --color-line: var(--line);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 8% -10%, rgba(232, 197, 114, 0.16), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(94, 224, 176, 0.1), transparent 50%),
+    radial-gradient(800px 500px at 70% 110%, rgba(255, 138, 122, 0.08), transparent 45%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(232, 197, 114, 0.35);
+  color: #08110c;
+}
+
+.paper-grid {
+  background-image:
+    linear-gradient(rgba(232, 197, 114, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 197, 114, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
+  border: 1px solid var(--line);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+}
