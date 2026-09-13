@@ -1,9 +1,7 @@
 "use client";
 
-import type { Session } from "next-auth";
-
 type AuthGateProps = {
-  session?: Session | null;
+  session?: unknown;
   isAdmin?: boolean;
   githubUser?: string;
 };

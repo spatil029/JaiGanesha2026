@@ -101,6 +101,13 @@ export function LedgerApp() {
               </article>
             </section>
 
+            <div className="glass rounded-[2rem] border border-amber-400/40 bg-amber-500/10 px-5 py-4 text-sm leading-6 text-amber-100 shadow-[0_0_30px_rgba(245,158,11,0.12)]">
+              <span className="font-semibold uppercase tracking-[0.18em] text-amber-300">Note:</span>{" "}
+              All the expenses are not included, will include them soon.{" "}
+              <span className="font-semibold text-amber-200">11k for decoration</span> and{" "}
+              <span className="font-semibold text-amber-200">1k for Poojari</span> is pending.
+            </div>
+
             <DailyBars daily={data.daily} />
 
             <section className="grid items-start gap-6 lg:grid-cols-[minmax(0,1.4fr)]">
