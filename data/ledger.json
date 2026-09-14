@@ -1,0 +1,157 @@
+{
+  "entries": [
+    {
+      "id": 1,
+      "type": "credit",
+      "amount": 1000,
+      "description": "from flat 305",
+      "category": "Transfer",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 2,
+      "type": "credit",
+      "amount": 2000,
+      "description": "from 401 and 402",
+      "category": "Transfer",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 3,
+      "type": "credit",
+      "amount": 1000,
+      "description": "from 204",
+      "category": "Transfer",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 4,
+      "type": "credit",
+      "amount": 1000,
+      "description": "from 103",
+      "category": "Transfer",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 5,
+      "type": "credit",
+      "amount": 1000,
+      "description": "from 004",
+      "category": "Transfer",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 6,
+      "type": "credit",
+      "amount": 1000,
+      "description": "from 101",
+      "category": "Transfer",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 7,
+      "type": "credit",
+      "amount": 1000,
+      "description": "from 005",
+      "category": "Transfer",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 8,
+      "type": "credit",
+      "amount": 1001,
+      "description": "from 105",
+      "category": "Transfer",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 9,
+      "type": "expense",
+      "amount": 1000,
+      "description": "Gouri Ganesha",
+      "category": "Other",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 10,
+      "type": "expense",
+      "amount": 1000,
+      "description": "Poojari advance",
+      "category": "Other",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 11,
+      "type": "expense",
+      "amount": 3000,
+      "description": "decoration advance",
+      "category": "Shopping",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 12,
+      "type": "expense",
+      "amount": 400,
+      "description": "fruits",
+      "category": "Food",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 13,
+      "type": "expense",
+      "amount": 540,
+      "description": "banana, coconut, pomegranates",
+      "category": "Food",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 14,
+      "type": "credit",
+      "amount": 1000,
+      "description": "from 302",
+      "category": "Transfer",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 15,
+      "type": "expense",
+      "amount": 270,
+      "description": "Pooja shop",
+      "category": "Other",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 16,
+      "type": "expense",
+      "amount": 100,
+      "description": "Banana tree",
+      "category": "Other",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    },
+    {
+      "id": 17,
+      "type": "expense",
+      "amount": 150,
+      "description": "flowers",
+      "category": "Other",
+      "occurred_on": "2026-09-13",
+      "created_at": "2026-09-13 00:00:00"
+    }
+  ]
+}

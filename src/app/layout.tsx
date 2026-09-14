@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   title: "Public Account Ledger",
   description:
     "A shared daily ledger of account credits and expenses. Anyone can view the books.",
+  icons: {
+    icon: "/JaiGanesha.png",
+    shortcut: "/JaiGanesha.png",
+    apple: "/JaiGanesha.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
