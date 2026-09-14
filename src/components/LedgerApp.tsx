@@ -11,8 +11,8 @@ export function LedgerApp() {
   const [data, setData] = useState<LedgerPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
-  const paidByHarish = 460;
-  const pendingToPay = 12000;
+  const paidByHarish = 460 + 11000;
+  const pendingToPay = 12000 - 11000;
 
   async function load() {
     const response = await fetch("/api/entries", { cache: "no-store" });
@@ -130,8 +130,8 @@ export function LedgerApp() {
               Expense done by others for{" "}
               <span className="font-semibold text-amber-200">decoration</span> and{" "}
               <span className="font-semibold text-amber-200">Poojari</span>.{" "}
-              <span className="font-semibold text-amber-200">₹460</span> was spent by Harish, and{" "}
-              <span className="font-semibold text-amber-200">₹12,000</span> is pending to be paid from balance.
+              <span className="font-semibold text-amber-200">₹11,460</span> was spent by Harish, and{" "}
+              <span className="font-semibold text-amber-200">₹1,000</span> is pending to be paid from balance.
             </div>
 
             <DailyBars daily={data.daily} />

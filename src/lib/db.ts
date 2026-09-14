@@ -165,6 +165,15 @@ const defaultEntries: LedgerEntry[] = [
     occurred_on: "2026-09-14",
     created_at: "2026-09-14 00:00:00",
   },
+  {
+    id: 19,
+    type: "expense",
+    amount: 11000,
+    description: "decoration paid",
+    category: "Other",
+    occurred_on: "2026-09-14",
+    created_at: "2026-09-14 00:00:00",
+  },
 ];
 
 const storageDir = process.env.VERCEL ? "/tmp/account-ledger" : path.join(process.cwd(), "data");
