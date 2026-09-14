@@ -11,6 +11,8 @@ export function LedgerApp() {
   const [data, setData] = useState<LedgerPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const paidByHarish = 460;
+  const pendingToPay = 12000;
 
   async function load() {
     const response = await fetch("/api/entries", { cache: "no-store" });
@@ -101,11 +103,35 @@ export function LedgerApp() {
               </article>
             </section>
 
+            <div className="grid gap-4 lg:grid-cols-2">
+              <article className="glass rounded-[2rem] border border-sky-400/30 bg-sky-500/5 p-6">
+                <p className="text-xs uppercase tracking-[0.24em] text-sky-200/80">Paid by others</p>
+                <p className="mt-5 font-[family-name:var(--font-display)] text-4xl text-sky-100">
+                  {formatMoney(paidByHarish)}
+                </p>
+                <p className="mt-3 text-sm leading-6 text-muted">
+                  Spent by Harish. This amount is not included in the main expense total.
+                </p>
+              </article>
+
+              <article className="glass rounded-[2rem] border border-amber-400/30 bg-amber-500/5 p-6">
+                <p className="text-xs uppercase tracking-[0.24em] text-amber-200/80">Pending to pay</p>
+                <p className="mt-5 font-[family-name:var(--font-display)] text-4xl text-amber-100">
+                  {formatMoney(pendingToPay)}
+                </p>
+                <p className="mt-3 text-sm leading-6 text-muted">
+                  Still to be paid from the balance. This is separate from the main expense total.
+                </p>
+              </article>
+            </div>
+
             <div className="glass rounded-[2rem] border border-amber-400/40 bg-amber-500/10 px-5 py-4 text-sm leading-6 text-amber-100 shadow-[0_0_30px_rgba(245,158,11,0.12)]">
               <span className="font-semibold uppercase tracking-[0.18em] text-amber-300">Note:</span>{" "}
-              All the expenses are not included, will include them soon.{" "}
-              <span className="font-semibold text-amber-200">11k for decoration</span> and{" "}
-              <span className="font-semibold text-amber-200">1k for Poojari</span> is pending.
+              Expense done by others for{" "}
+              <span className="font-semibold text-amber-200">decoration</span> and{" "}
+              <span className="font-semibold text-amber-200">Poojari</span>.{" "}
+              <span className="font-semibold text-amber-200">₹460</span> was spent by Harish, and{" "}
+              <span className="font-semibold text-amber-200">₹12,000</span> is pending to be paid from balance.
             </div>
 
             <DailyBars daily={data.daily} />
