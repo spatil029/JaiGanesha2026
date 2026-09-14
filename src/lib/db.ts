@@ -7,7 +7,7 @@ const defaultEntries: LedgerEntry[] = [
     id: 1,
     type: "credit",
     amount: 1000,
-    description: "from flat 305",
+    description: "from flat 304",
     category: "Transfer",
     occurred_on: "2026-09-13",
     created_at: "2026-09-13 00:00:00",
