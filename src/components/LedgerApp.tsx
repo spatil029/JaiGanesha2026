@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { ArrowDownLeft, ArrowUpRight, BookOpen, Sparkles } from "lucide-react";
 import { DailyBars } from "@/components/DailyBars";
 import { LedgerTimeline } from "@/components/LedgerTimeline";
+import AnimatedNumber from "@/components/AnimatedNumber";
 import { formatMoney, formatSigned } from "@/lib/format";
 import type { LedgerPayload } from "@/lib/types";
 
@@ -11,8 +12,8 @@ export function LedgerApp() {
   const [data, setData] = useState<LedgerPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
-  const paidByHarish = 460 + 11000;
-  const pendingToPay = 12000 - 11000;
+  const paidByHarish = 4665;
+  const paidBySahadev = 6706;
 
   async function load() {
     const response = await fetch("/api/entries", { cache: "no-store" });
@@ -72,7 +73,7 @@ export function LedgerApp() {
                   Current balance
                 </p>
                 <p className="mt-4 font-[family-name:var(--font-display)] text-5xl text-ink sm:text-7xl">
-                  {formatMoney(data.summary.balance)}
+                  <AnimatedNumber value={data.summary.balance} format={formatMoney} duration={2000} />
                 </p>
                 <p className="mt-4 flex items-center gap-2 text-sm text-muted">
                   <Sparkles className="size-4 text-gold" />
@@ -86,7 +87,7 @@ export function LedgerApp() {
                   <ArrowDownLeft className="size-5 text-credit" />
                 </div>
                 <p className="mt-6 font-[family-name:var(--font-display)] text-4xl text-credit">
-                  {formatMoney(data.summary.credit)}
+                  <AnimatedNumber value={data.summary.credit} format={formatMoney} duration={2000} />
                 </p>
                 <p className="mt-3 text-sm text-muted">Money added to the account</p>
               </article>
@@ -97,7 +98,7 @@ export function LedgerApp() {
                   <ArrowUpRight className="size-5 text-expense" />
                 </div>
                 <p className="mt-6 font-[family-name:var(--font-display)] text-4xl text-expense">
-                  {formatMoney(data.summary.expense)}
+                  <AnimatedNumber value={data.summary.expense} format={formatMoney} duration={2000} />
                 </p>
                 <p className="mt-3 text-sm text-muted">Money leaving the account</p>
               </article>
@@ -105,33 +106,34 @@ export function LedgerApp() {
 
             <div className="grid gap-4 lg:grid-cols-2">
               <article className="glass rounded-[2rem] border border-sky-400/30 bg-sky-500/5 p-6">
-                <p className="text-xs uppercase tracking-[0.24em] text-sky-200/80">Paid by others</p>
+                <p className="text-xs uppercase tracking-[0.24em] text-sky-200/80">Paid by Harish</p>
                 <p className="mt-5 font-[family-name:var(--font-display)] text-4xl text-sky-100">
-                  {formatMoney(paidByHarish)}
+                  <AnimatedNumber value={paidByHarish} format={formatMoney} duration={2000} />
                 </p>
+                <div className="mt-3 text-sm leading-6 text-muted">
+                  <div>1. Flower/Fruits/panche and etc - <AnimatedNumber value={420} format={formatMoney} duration={2000} /></div>
+                  <div>2. FOOD - <AnimatedNumber value={3000} format={formatMoney} duration={2000} /> + Transportation - <AnimatedNumber value={450} format={formatMoney} duration={2000} /></div>
+                  <div>3. Plates/Glass Etc - <AnimatedNumber value={795} format={formatMoney} duration={2000} /></div>
+                </div>
                 <p className="mt-3 text-sm leading-6 text-muted">
-                  Spent by Harish. This amount is not included in the main expense total.
+                  This amount is included in the main expense total.
                 </p>
               </article>
 
-              <article className="glass rounded-[2rem] border border-amber-400/30 bg-amber-500/5 p-6">
-                <p className="text-xs uppercase tracking-[0.24em] text-amber-200/80">Pending to pay</p>
-                <p className="mt-5 font-[family-name:var(--font-display)] text-4xl text-amber-100">
-                  {formatMoney(pendingToPay)}
+              <article className="glass rounded-[2rem] border border-sky-400/30 bg-sky-500/5 p-6">
+                <p className="text-xs uppercase tracking-[0.24em] text-sky-200/80">Paid by Sahadev</p>
+                <p className="mt-5 font-[family-name:var(--font-display)] text-4xl text-sky-100">
+                  <AnimatedNumber value={paidBySahadev} format={formatMoney} duration={2000} />
                 </p>
                 <p className="mt-3 text-sm leading-6 text-muted">
-                  Still to be paid from the balance. This is separate from the main expense total.
+                  Spent by Sahadev. This amount is included in the main expense total.
                 </p>
               </article>
             </div>
 
             <div className="glass rounded-[2rem] border border-amber-400/40 bg-amber-500/10 px-5 py-4 text-sm leading-6 text-amber-100 shadow-[0_0_30px_rgba(245,158,11,0.12)]">
               <span className="font-semibold uppercase tracking-[0.18em] text-amber-300">Note:</span>{" "}
-              Expense done by others for{" "}
-              <span className="font-semibold text-amber-200">decoration</span> and{" "}
-              <span className="font-semibold text-amber-200">Poojari</span>.{" "}
-              <span className="font-semibold text-amber-200">₹11,460</span> was spent by Harish, and{" "}
-              <span className="font-semibold text-amber-200">₹1,000</span> is pending to be paid from balance.
+               Paid by Harish: <span className="font-semibold text-amber-200">{formatMoney(paidByHarish)}</span>. Paid by Sahadev: <span className="font-semibold text-amber-200">{formatMoney(paidBySahadev)}</span>.
             </div>
 
             <DailyBars daily={data.daily} />

@@ -171,5 +171,61 @@
       "occurred_on": "2026-09-14",
       "created_at": "2026-09-14 00:00:00"
     }
+    ,
+    {
+      "id": 20,
+      "type": "credit",
+      "amount": 1000,
+      "description": "from 202",
+      "category": "Transfer",
+      "occurred_on": "2026-09-15",
+      "created_at": "2026-09-15 00:00:00"
+    },
+    {
+      "id": 21,
+      "type": "credit",
+      "amount": 1000,
+      "description": "from 002",
+      "category": "Transfer",
+      "occurred_on": "2026-09-15",
+      "created_at": "2026-09-15 00:00:00"
+    },
+    {
+      "id": 22,
+      "type": "credit",
+      "amount": 1000,
+      "description": "from 003",
+      "category": "Transfer",
+      "occurred_on": "2026-09-15",
+      "created_at": "2026-09-15 00:00:00"
+    },
+    {
+      "id": 23,
+      "type": "expense",
+      "amount": 1000,
+      "description": "Poojari",
+      "category": "Other",
+      "occurred_on": "2026-09-15",
+      "created_at": "2026-09-15 00:00:00"
+    },
+    {
+      "id": 24,
+      "type": "expense",
+      "amount": 500,
+      "description": "driver",
+      "category": "Other",
+      "occurred_on": "2026-09-15",
+      "created_at": "2026-09-15 00:00:00"
+    }
+    ,
+    {
+      "id": 25,
+      "type": "expense",
+      "amount": 4665,
+      "description": "spent by Harish for food and accessories",
+      "category": "Other",
+      "occurred_on": "2026-09-15",
+      "created_at": "2026-09-15 00:00:00"
+    }
   ]
 }

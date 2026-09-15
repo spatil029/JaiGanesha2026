@@ -1,6 +1,9 @@
+"use client";
+
 import { ArrowDownLeft, ArrowUpRight } from "lucide-react";
 import { formatDay, formatMoney } from "@/lib/format";
 import type { LedgerEntry } from "@/lib/types";
+import AnimatedNumber from "@/components/AnimatedNumber";
 
 type Props = {
   entries: LedgerEntry[];
@@ -32,7 +35,7 @@ export function LedgerTimeline({ entries }: Props) {
                   {formatDay(group.date)}
                 </h3>
                 <p className="font-mono text-xs text-muted">
-                  in {formatMoney(group.credit)} · out {formatMoney(group.expense)}
+                  in <AnimatedNumber value={group.credit} format={formatMoney} duration={2000} /> · out <AnimatedNumber value={group.expense} format={formatMoney} duration={2000} />
                 </p>
               </div>
               <ul className="space-y-2">
@@ -66,7 +69,7 @@ export function LedgerTimeline({ entries }: Props) {
                         }`}
                       >
                         {isCredit ? "+" : "−"}
-                        {formatMoney(entry.amount)}
+                        <AnimatedNumber value={entry.amount} format={formatMoney} duration={2000} />
                       </p>
                     </li>
                   );
